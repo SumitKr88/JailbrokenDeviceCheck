@@ -1,2 +1,2 @@
 # JailbrokenDeviceCheck
-Security check to validated if device is jailbroken
+Security checks to validate if device is jailbroken
