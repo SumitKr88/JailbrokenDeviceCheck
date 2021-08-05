@@ -104,3 +104,10 @@ extension UIDevice {
         return false
     }
 }
+
+
+///Also try adding "Cydia" in LSApplicationQueriesSchemes key of info.plist. Otherwise canOpenURL will always return false.
+<key>LSApplicationQueriesSchemes</key>
+<array>
+    <string>cydia</string>
+</array>
