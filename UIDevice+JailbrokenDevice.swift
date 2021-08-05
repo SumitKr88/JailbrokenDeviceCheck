@@ -10,6 +10,17 @@ extension UIDevice {
         return isSim
     }()
     
+    /// Checks if device is jailbroken or not
+    var isJailBroken: Bool {
+            get {
+                if UIDevice.isSimulator { return false }
+                if UIDevice.isAppContainUnAuthorizedApps() { return true }
+                if UIDevice.isAppContainUnAuthorizedApps() { return true }
+                if UIDevice.isAppCanOpenUnAuthorizedURL() { return true }
+                return UIDevice.isAppCanEditSystemFiles()
+            }
+    }
+    
     /// List of unauthorized apps path
     static var unAuthorizedApps: [String] {
         let appsList = ["/Applications/Cydia.app",
