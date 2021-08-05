@@ -15,7 +15,7 @@ extension UIDevice {
             get {
                 if UIDevice.isSimulator { return false }
                 if UIDevice.isAppContainUnAuthorizedApps() { return true }
-                if UIDevice.isAppContainUnAuthorizedApps() { return true }
+                if UIDevice.isAppContainUnAuthorizedFiles() { return true }
                 if UIDevice.isAppCanOpenUnAuthorizedURL() { return true }
                 return UIDevice.isAppCanEditSystemFiles()
             }
